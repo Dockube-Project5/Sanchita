@@ -1,9 +1,17 @@
 # Sanchita
 # Building an image
+```
 docker build -t <folder-name> .
+```
+```
 docker images
+```
+```
 docker run <image-id>
+```
+```
 docker run -dp <portname>:<portname> <image name>
+```
   # Go to http://loclhost:<portname>
 # Pushing image to Docker hub
 docker login
