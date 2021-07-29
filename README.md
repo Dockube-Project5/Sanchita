@@ -12,7 +12,7 @@ docker run <image-id>
 ```
 docker run -dp <portname>:<portname> <image name>
 ```
-  ## Go to http://loclhost:<portname>
+  ## Go to http://loclhost:\<portname\>
 # Pushing image to Docker hub
 ```
 docker login
@@ -36,5 +36,5 @@ kubectl get deployments
 ```
 curl http://localhost:<port-name>
 ```
-  ## Go to http://loclhost:<portname>
+  ## Go to http://loclhost:\<portname\>
   
