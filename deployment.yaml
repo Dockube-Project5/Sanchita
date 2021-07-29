@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockube-sanchita
+spec:
+  replicas: 2
+  selector:
+      matchLabels:
+        app: dockube-sanchita
+  template:
+    metadata:
+      labels:
+        app: dockube-sanchita
+    spec:
+      containers:
+      - name: dockube-sanchita
+        image: sanchitaagnihotri/dockube_sanchita:sanchita_app_push
+        ports: 
+        - containerPort: 80
+        - containerPort: 443
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dockube-sanchita
+spec:
+  selector:
+    app: dockube-sanchita
+  ports:
+  - name: http
+    protocol: TCP
+    port: 2000
+    targetPort: 2000
+  type: LoadBalancer
